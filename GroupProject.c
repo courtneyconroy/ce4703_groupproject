@@ -4,6 +4,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+//q is entire polynomial
+//ptr is pointer
+//p is the node
+//
 struct node
 {
     int cof;                                                	//n
