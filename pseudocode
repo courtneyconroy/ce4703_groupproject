@@ -1,0 +1,23 @@
+//Group Project
+//Sinead O Dowd, Sean Ryan Tobin, Courtney Conroy, Panos Brennan
+//pseudo code file
+//1.Defines polynomial datatype
+//2.pseudo operations - 7 steps
+//3.how user will see operation and write down functions
+//4.implement
+
+
+//1.
+//We plan on storing the polynomials using linked lists. 
+
+
+//3.pseudo code for functions
+//create/delete a polynomial
+//
+// add/subtract two polynomials
+
+
+//multiplication/division by a double
+//normalise polynomial (coefficient of highest order term = 1)
+//return order of polynomial (the highest power with coefficient 6= 0)
+//print polynomial
