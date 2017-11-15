@@ -15,9 +15,14 @@
 //create/delete a polynomial
 //
 // add/subtract two polynomials
-
-
+//
+//
 //multiplication/division by a double
+//
+//
 //normalise polynomial (coefficient of highest order term = 1)
+//
 //return order of polynomial (the highest power with coefficient 6= 0)
+//
+//
 //print polynomial
