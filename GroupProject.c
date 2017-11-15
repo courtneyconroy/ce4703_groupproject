@@ -1,3 +1,5 @@
+/*************************************************************************************************/
+//online code
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -100,3 +102,5 @@ void err_exit(char const *tag)
     fprintf(stderr, "%s\n", tag);
     exit(1);
 }
+//online code end
+/*******************************************/
