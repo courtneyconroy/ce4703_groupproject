@@ -4,6 +4,7 @@
 // This code creates 2 polynomials and sorts them according to their exponent
 
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -88,6 +89,19 @@ void display(char const *tag, struct node *ptr)
 
 int main(void) // main function
 {
+  printf("Tasks Required\n");
+  printf("Tasks\t\t\t\t Completed By   \t Date Completed\n");
+  printf("Create Polynomial\t\t\tPanos \t\t 19/11/2017\n");
+  printf("Delete Polynomial\n");
+  printf("Add two Polynomials\n");
+  printf("Subtract two Polynomials\n");
+  printf("Multiplication by a Double\n");
+  printf("Division by a Double\n");
+  printf("Normalise Polynomial\n");
+  printf("Return order of polynomial\n");
+  printf("Print Polynomial\n");
+  printf("\n\n\n\n");
+  
   printf("enter the first polynomial:\n"); // asks the user to enter the first polynomial one piece at a time.
     struct node *p1 = NULL, *p2 = NULL;
 
