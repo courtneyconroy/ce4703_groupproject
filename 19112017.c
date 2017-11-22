@@ -11,7 +11,7 @@
 
 struct node //structures linked list
 {
-  double cof;   // value for each coefficient
+  double cof;   //value for each coefficient
   int exp;      //value for each exponent
   struct node *link; 
 };
@@ -86,6 +86,11 @@ void display(char const *tag, struct node *ptr)
     }
     putchar('\n');
 }
+//void multiply()
+//{
+//  int main*p1;
+//  double x =2;
+//}
 
 int main(void) // main function
 {
