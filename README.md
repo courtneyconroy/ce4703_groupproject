@@ -24,6 +24,46 @@ Header file:
   current 
 * function declarations
 
+
+
+
+///////////////
+Functions
+///////////////
+
+
+///////
+add_poly
+///////
+
+
+
+
+
+void function with poly1, poly2, poly_add
+//3 if conditions:1 poly1 > poly2, poly1 <poly2, poly1 =poly2.   (in terms of exp)
+while  poly 1 is next and poly 2 is next
+{
+if exp of poly1 is greater than poly2
+  exp of poly is equal to exp of poly1
+  coef of poly is equal to coeff of poly1
+  poly1 is equal to next poly1
+  
+else if exp of poly1 is less than poly 2
+   exp of poly is equal to exp of poly2
+  coef of poly is equal to coeff of poly2
+  poly2 is equal to next poly2  
+else
+  exp of poly is equalt to poly1 exp
+  coeff poly is equal to poly1 coeff and poly2 coeff
+  poly 1 is equal to next poly1
+  poly 2 is equal next poly2
+//dynamically create new node
+
+
+
+
+
 ///////////////////////
 Main file
 int main()
