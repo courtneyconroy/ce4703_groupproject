@@ -1,4 +1,4 @@
-// Authors : Panos Brennan, Sinead O'Dowd, Courtney Conroy, Shaun Ryan-Tobin
+// Authors : Panos Brennan, Sinead O'Dowd, Courtney Conroy, Sean Ryan-Tobin
 // Date 19/11/2017 (DD/MM/YYYY)
 // Code to make 2 polynomials using a linked list.
 // This code creates 2 polynomials and sorts them according to their exponent
@@ -17,9 +17,9 @@ struct node //structures linked list
 };
 
 
-struct node *create(struct node *q); // creates first node
-struct node *insert(struct node *ptr, struct node *p); // inserts next node
-void display(char const *tag, struct node *ptr);
+struct node *create(struct node *q); // creates Linked list.
+struct node *insert(struct node *head, struct node *tail); // inserts next node
+void display(char const *tag, struct node *head);
 void err_exit(char const *tag);
 
 struct node *create(struct node *q)
@@ -30,53 +30,53 @@ struct node *create(struct node *q)
         err_exit("Read error (number of nodes)");
     for (i = 0; i < n; i++) // continuation of counter
     {
-        struct node *ptr = (struct node *)malloc(sizeof(struct node));
-        if (ptr == 0)
+        struct node *head = (struct node *)malloc(sizeof(struct node));
+        if (head == 0)
 	  err_exit("Out of memory (1)"); // stops program if it runs out of memory
         printf("enter the coefficient and exponent respectively: ");  // asks user to enter values for coefficient and exponent
-        if (scanf("%lf%d", &ptr->cof, &ptr->exp) != 2)
+        if (scanf("%lf%d", &head->cof, &head->exp) != 2)
 	  err_exit("Read error (coefficient and exponent)"); // makes sure coefficient and exponent are entered correctly
-        ptr->link = NULL;
-        q = insert(ptr, q);
+        head->link = NULL;
+        q = insert(head, q);
         display("after input", q); // displays polynomial after each input
     }
     return q; // shows polynomial when complete
 }
 
-struct node *insert(struct node *ptr, struct node *p) //inserts each part of linked list
+struct node *insert(struct node *head, struct node *tail) //inserts each part of linked list
 {
   struct node *temp, *b;  // temp coefficient by temp exponent
-    if (p == NULL)
-        p = ptr;
+    if (tail == NULL)
+        tail = head;
     else
     {
-        display("insert: p   = ", p);
-        display("insert: ptr = ", ptr);
-        if (p->exp < ptr->exp)
+        display("insert: tail   = ", tail);
+        display("insert: head = ", head);
+        if (tail->exp < head->exp)
         {
-            ptr->link = p;
-            p = ptr;
+            head->link = tail;
+            tail = head;
         }
         else
         {
-            temp = p;
-            while ((temp->link != NULL) && (temp->link->exp < ptr->exp))
+            temp = tail;
+            while ((temp->link != NULL) && (temp->link->exp < head->exp))
                 display("insert: tmp = ", temp),
                 temp = temp->link;
             display("insert: post loop", temp);
             b = temp->link;
-            temp->link = ptr;
-            ptr->link = b;
+            temp->link = head;
+            head->link = b;
         }
     }
-    return p;
+    return tail;
 }
 
-void display(char const *tag, struct node *ptr) 
+void display(char const *tag, struct node *head) 
 {
   struct node *temp; // temp node on linked list
     const char *pad = "";
-    temp = ptr;
+    temp = head;
     printf("%s: ", tag);
     while (temp != NULL)
     {
@@ -108,15 +108,15 @@ int main(void) // main function
   printf("\n\n\n\n");
   
   printf("enter the first polynomial:\n"); // asks the user to enter the first polynomial one piece at a time.
-    struct node *p1 = NULL, *p2 = NULL;
+    struct node *poly1 = NULL, *poly2 = NULL;
 
-    p1 = create(p1); // creates a linked list called p1
+    poly1 = create(poly1); // creates a linked list called p1
 
     printf("enter the second polynomial:\n");
-    p2 = create(p2); // creates a linked list called p2
+    poly2 = create(poly2); // creates a linked list called p2
 
-    display("p1", p1); // displays linked list p1
-    display("p2", p2); // displays linked list p2
+    display("p1", poly1); // displays linked list p1
+    display("p2", poly2); // displays linked list p2
 
     return 0;
 }
