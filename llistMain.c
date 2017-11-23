@@ -15,7 +15,8 @@ int main()
   //declare list names for 2 polys
   llist *poly1 = NULL;
   llist *poly2 = NULL;
-  data newData; //data the user will be asked to input
+  data dataPoly1; //data the user will be asked to input
+  data dataPoly2;
   int menuChoice = -1; //variable used when user has to choose from menu of operations
 
   while (menuChoice !=) {
