@@ -43,6 +43,10 @@ int main () {
     //order of the equation.
     
   }
-  
+  ///multipy /devideing polynomials
+  int iMult 
+   for (jNorm=0;jNorm<=5;jNorm++){
+    coeff[jNorm]=coeff[jNorm]/maxValue;
+  }
   
 }
