@@ -2,16 +2,24 @@
 
 int main () {
   double coeff[5]= {2,5,7,5,4}; //n is an array of integers
-  int i,j;
+  int iNorm,jNorm;
   int maxValue = coeff[0];
-  for (i=0;i<=5;i++){
-    if (coeff[i]>maxValue){
-      maxValue= coeff[i];	
+  for (iNorm=0;iNorm<=5;iNorm++){
+    if (coeff[iNorm]>maxValue){
+      maxValue= coeff[iNorm];	
     }
   }
-  for (j=0;j<=5;j++){
-    coeff[j]=coeff[j]/maxValue;
+  for (jNorm=0;jNorm<=5;jNorm++){
+    coeff[jNorm]=coeff[jNorm]/maxValue;
   }
-
+  double exp [5]={5,35,7,9,5};
+  int iOrder,jOrder;
+  int maxValue = coeff[0];
+  for (iOrder=0;iOrder<=5;iOrder++){
+    if (exp[iOrder]>maxValue){
+      maxValue= exp[iOrder];	
+    }
+  }
+  
 }
 
