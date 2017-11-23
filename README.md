@@ -77,7 +77,7 @@ break
 Case 1: Create new linked list
 if list = null, print that list is already in use
 else create list, list = listCreate function
-Case2: Insert new data
+Case2: Insert new data for polynomials
 if liset != Null, enter new data (printf/scanf functions)
   cont.. call insert new node, if the new data from list is ok, print "Success"
         if not print "Unsuccessful, cancelled, create a link list.. break
@@ -95,5 +95,7 @@ Case 4: Add 2 polynomials
 Case 5: Delete 2 polynomials
 Case 6: Multiply by a double
 Case 7: Divide by a double
+Case 8: Normalise
+Case 10: Return order
 
 return EXIT_SUCCESS
