@@ -38,8 +38,6 @@ add_poly
 
 
 
-
-
 void function with poly1, poly2, poly_add
 //3 if conditions:1 poly1 > poly2, poly1 <poly2, poly1 =poly2.   (in terms of exp)
 while  poly 1 is next and poly 2 is next
@@ -61,6 +59,13 @@ else
 //dynamically create new node
 
 
+
+///////////////////
+normalise_poly
+////////////////// 
+#include <float.h>
+search array coeff to find max coefficent
+Devide array coeff by this max value
 
 
 
