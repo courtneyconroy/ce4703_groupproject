@@ -1,0 +1,62 @@
+///////////////////////////////////////////////////////
+// linkedList.h
+// header file for simple single linked list
+// implementation
+//
+// author:	reiner dojen
+// date:	25.10.2013
+///////////////////////////////////////////////////////
+
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
+
+///////////////////////////////////////////////////////
+// define error codes for linked list
+///////////////////////////////////////////////////////
+
+typedef enum {ok, illegalNode, noMemory} llError;
+
+///////////////////////////////////////////////////////
+// define structure for data to be stored in linked
+// list
+///////////////////////////////////////////////////////
+
+typedef struct {
+  int id;
+  char name[50];
+  char description[255];
+} data;
+
+///////////////////////////////////////////////////////
+// define structure for a node of a linked list
+///////////////////////////////////////////////////////
+
+typedef struct n {
+  data d; // store some data in node
+  struct n *successor; // store successor of node
+               // as typedef is not yet completed
+               // name llnode cannot be used
+} llnode;
+
+///////////////////////////////////////////////////////
+// define type for linked list
+///////////////////////////////////////////////////////
+
+typedef struct {
+  llnode *head;
+  llnode *current;
+} llist;
+
+///////////////////////////////////////////////////////
+// function declarations
+///////////////////////////////////////////////////////
+
+llist *listCreate();
+void listDelete(llist *list);
+data *accessData(llist *list);
+llError insertAfter(data *d, llist *list);
+llError deleteNext(llist *list);
+void gotoHead(llist *list);
+llError gotoNextNode(llist *list);
+
+#endif
