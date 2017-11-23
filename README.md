@@ -66,7 +66,25 @@ normalise_poly
 #include <float.h>
 search array coeff to find max coefficent
 Devide array coeff by this max value
+#include <stdio.h>
+ 
+int main () {
 
+   int coeff[ n ]; /* n is an array of n integers */
+   int i,j;
+ 
+   /* initialize elements of array n to 0 */         
+   for ( i = 0; i < n; i++ ) {
+      coeff[i]
+   }
+   
+   /* output each array element's value */
+   for (j = 0; j < 10; j++ ) {
+      printf("Element[%d] = %d\n", j, n[j] );
+   }
+ 
+   return 0;
+}
 
 
 ///////////////////////
