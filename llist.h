@@ -34,7 +34,12 @@ typedef struct {
 } llist;
 
 llist *listCreate();
-void nodeCreate (llist *list);
+void listDelete();
+llError addition (data *d, llist *list);
+llError subtraction (data *d, llist *list);
+llError multiplication (data *d, llist *list);
+llError division (data*d, llist*list);
+
 
 
 #endif
