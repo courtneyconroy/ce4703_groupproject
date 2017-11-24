@@ -30,7 +30,8 @@ struct term *createPoly (struct term *poly){
        t = (struct term *)malloc(sizeof(struct term));
        if (t == 0)
 	      printf("Out of memory (1)"); // stops program if it runs out of memory
-// I think the problem is here. Each node is created and needs to be linked to the previous node using something like the t->ptr = x; But I am not sure of the order of the commands.
+// I think the problem is here. Each node is created and needs to be linked to the previous node using something 
+	    //like the t->ptr = x; But I am not sure of the order of the commands.
        //x = t;
        t->num = rand()%(MAXNUM*10)-1;
        t->ptr = NULL;
