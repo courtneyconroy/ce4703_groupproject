@@ -1,0 +1,7 @@
+Links for each function:
+create/delete a polynomial : Done
+add/subtract two polynomials : http://ravikiran0606pds.blogspot.ie/p/c-program-to-add-two-polynomials-using.html
+multiplication/division by a double : 
+normalise polynomial (coefficient of highest order term = 1) :
+return order of polynomial (the highest power with coefficient 6 = 0) :
+print polynomial : https://stackoverflow.com/questions/20497544/get-nth-value-of-a-linked-list-in-c
