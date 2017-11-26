@@ -25,7 +25,7 @@ llist *listCreate()
     if (list->head != NULL) {
       // allocation successfull, satisfy condition
       // that head points to tail (NULL) and current is head
-      list->head->successor = NULL;
+      list->head->successor = NULL; 
       list->current = list->head;
     } else {
       // need to de-allocate list and set it to NULL
@@ -34,7 +34,7 @@ llist *listCreate()
     }
   }
   // returned value is as desired, failure of malloc()
-  // will return NULL which indicates also invalid
+  // will return NULL which  indicates also invalid
   // linked list
   return list;
   }
