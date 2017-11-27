@@ -1,0 +1,121 @@
+////////////////////////////////////////
+/* 
+ llist.h
+ This is a header file which contains the links for simple linked list implementation.
+authors: Panos Brennan, Sean Ryan Tobin, Sinead O' Dowd, Courtney Conroy
+date modified: 26/11/2017
+*/
+////////////////////////////////////////
+
+#include "llist.h"
+#include <stdlib.h>
+
+/*
+//this is what i was doing but the pointers are not letting me
+poly_ll  *createPoly(poly_ll *poly, int numNode, double x, double y){
+  int iNode;
+  
+  poly_ll *now;
+
+  poly_ll *now2;
+ 
+ 
+
+   
+  now = (poly_ll*)malloc(sizeof(poly_ll));
+  poly = now; // Don't lose the head of the list
+
+  now->coeff = x;
+  now->ptr = NULL; 
+  
+   
+  now2= now->ptr;
+    for(iNode=1; iNode<numNode; iNode++)
+       {
+      now2 =(poly_ll*)malloc(sizeof(poly_ll));
+now2->ptr = NULL;
+	    now2->coeff= y;
+       now = now2;
+       }
+       
+    return poly;
+
+    }
+*/
+//////tried creating a blank poly first but not working
+poly_ll *listCreate() 
+{
+  poly_ll *poly;
+  poly = (poly_ll *) malloc(sizeof(poly_ll));
+  // check for allocation success
+  if (poly != NULL) {
+    // attempt to allocate memory for head
+    poly->ptr = (poly_ll *) malloc(sizeof(poly_ll));
+  }
+  }
+poly_ll  *createPoly(poly_ll *poly, int numNode, double x, double y){
+  int iNode;
+  poly_ll  *now;
+
+    //create a random number of nodes
+   // Add 1 because order is 1 greater than the number of coefficients
+  now = (poly_ll *)malloc(sizeof(poly_ll));
+  poly = now; // Don't lose the head of the list
+
+  now->coeff = x;
+  now->ptr = NULL; // incase there are no more elements
+
+
+      //create the required number of nodes
+    for(iNode=1; iNode<numNode; iNode++)
+       {
+       now->ptr =(poly_ll *)malloc(sizeof(poly_ll)) ;
+       now->ptr->ptr = NULL;
+       now->ptr->coeff = y;
+       now = now->ptr;
+       }
+
+    return(poly);
+   }
+void displayPoly(poly_ll *head)
+{
+    
+    poly_ll *poly;
+    const char *pad = "";
+       int i=0;
+    poly= head;
+    
+    while (poly != NULL)
+    {
+       printf("%s%.2lf x ^ %d", pad, poly->coeff, i);// replaces temp values with real values entered by user
+       poly= poly->ptr;
+        pad = " + ";
+        i++;
+    }
+    putchar('\n');
+}
+
+
+
+
+//////
+/* another try at create Poly
+ poly = (poly_ll*)malloc(sizeof(poly_ll));
+ a = poly; // Don't lose the head of the list
+  poly->coeff= x;
+  poly->ptr = NULL; // incase there are no more elements
+
+
+      //create the required number of nodes
+    for(iNode=1; iNode<numNode; iNode++)
+       {
+      b =  (poly_ll*)malloc(sizeof(poly_ll));
+
+      b->ptr = NULL;
+       b ->coeff = y;
+     a->ptr =b->ptr;
+       }
+
+    return poly  ;
+   }
+*/
