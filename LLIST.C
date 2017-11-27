@@ -9,6 +9,7 @@ date modified: 26/11/2017
 
 #include "llist.h"
 #include <stdlib.h>
+#include <stdio.h>
 #define MAXNUM 10
 struct term  *createPoly(struct term  *poly){
   int iNode;
