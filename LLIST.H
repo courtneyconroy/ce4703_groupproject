@@ -8,13 +8,12 @@ date modified: 26/11/2017
 ////////////////////////////////////////
 
 
-#ifndef LINKEDLIST_H
-#define  LINKEDLIST_H
+#ifndef LLIST_H
+#define  LLIST_H
 
 
 
-#include <stdio.h>
-#include <stdlib.h>
+
 
 
 
